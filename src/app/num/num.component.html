@@ -1,0 +1,29 @@
+<p>num works!</p>
+
+<div class="numForm">
+    <div class="form-group">
+        <label for="num">Szám</label>
+        <input type="text" id="num"
+        [(ngModel)]="num">
+    </div>
+
+    <div>
+        <button (click)="getNum()">Lekér</button>
+    </div>
+
+    @if (displayDuplaNum) {
+        <div class="form-group">
+            <label for="doubleNum">Dupla</label>
+            <input type="text" id="doubleNum"
+            [(ngModel)]="doubleNum">
+        </div>
+    }
+</div>
+
+<div class="list">
+    <ul>
+        @for( num of resultList; track num) {
+            <li>{{ num }}</li>
+        }
+    </ul>
+</div>
